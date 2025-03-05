@@ -1,4 +1,5 @@
 import { defineGkdApp } from '@gkd-kit/define';
+import { ZDJL_DESC } from '../const';
 
 export default defineGkdApp({
   id: 'com.zdanjian.zdanjian',
@@ -7,7 +8,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '自动精灵-无障碍提示',
-      desc: '请在“规则类别”中启用“自动精灵”来使用',
+      desc: `${ZDJL_DESC}；无障碍提示对话框自动点击`,
       rules: [
         {
           matches: [
@@ -21,7 +22,7 @@ export default defineGkdApp({
     {
       key: 1,
       name: '自动精灵-选择运行模式',
-      desc: '请在“规则类别”中启用“自动精灵”来使用',
+      desc: `${ZDJL_DESC}；选择运行模式对话框自动确认`,
       rules: [
         {
           action: 'clickCenter',

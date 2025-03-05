@@ -1,4 +1,5 @@
 import { defineGkdApp } from '@gkd-kit/define';
+import { ZDJL_DESC } from '../const';
 
 export default defineGkdApp({
   id: 'com.android.systemui',
@@ -7,7 +8,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '自动精灵-自动允许录制权限',
-      desc: '请在“规则类别”中启用“自动精灵”来使用',
+      desc: `${ZDJL_DESC}；请求录制权限对话框点击“立即开始”`,
       rules: [
         {
           matches: [

@@ -1,4 +1,5 @@
 import { defineGkdApp } from '@gkd-kit/define';
+import { ZDJL_DESC } from '../const';
 
 export default defineGkdApp({
   id: 'com.android.settings',
@@ -7,7 +8,7 @@ export default defineGkdApp({
     {
       key: 0,
       name: '自动精灵-自动开启无障碍',
-      desc: '请在“规则类别”中启用“自动精灵”来使用；需要手动滑动到自动精灵出现',
+      desc: `${ZDJL_DESC}；需要手动滑动到自动精灵出现`,
       rules: [
         {
           key: 0,
