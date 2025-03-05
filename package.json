@@ -2,6 +2,7 @@
   "name": "@tsuk1ko/gkd-subscription",
   "version": "0.0.0",
   "type": "module",
+  "main": "./dist/gkd.json5",
   "scripts": {
     "postinstall": "simple-git-hooks",
     "format": "prettier --cache --write ./**/*.{mjs,ts}",
