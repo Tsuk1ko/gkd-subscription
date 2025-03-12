@@ -12,7 +12,7 @@ export default defineGkdApp({
         {
           matches: ['[vid="tv_deny"][text="暂不"]'],
           fastQuery: true,
-          activityIds: ['com.ct.client.activity.MainActivity'],
+          activityIds: [],
         },
       ],
     },
