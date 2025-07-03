@@ -12,6 +12,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          actionDelay: 1000,
           matches: [
             '[id="android:id/summary"][text="已关闭"] - [id="android:id/title"][text="自动精灵"]',
           ],
