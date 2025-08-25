@@ -6,15 +6,14 @@ export default defineGkdApp({
   groups: [
     {
       key: 0,
-      name: '半屏弹窗-花呗',
+      name: '半屏弹窗-服务推销',
       desc: '点击“不感兴趣”',
       rules: [
         {
           fastQuery: true,
           activityIds: 'com.alipay.android.msp.ui.views.MspContainerActivity',
           matches: [
-            '[text="可享「花呗」先用后还服务"] <<n [id="com.alipay.android.app:id/flybird_layout"]',
-            '[text="不感兴趣"]',
+            '[id="com.alipay.android.app:id/flybird_layout"] [text="不感兴趣"]',
           ],
         },
       ],
