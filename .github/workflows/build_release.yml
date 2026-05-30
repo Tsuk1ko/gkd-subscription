@@ -1,6 +1,16 @@
 name: build_release
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Force publish
+        required: false
+        type: boolean
+
+permissions:
+  id-token: write
+  contents: write
 
 jobs:
   build_release:
@@ -8,15 +18,15 @@ jobs:
     outputs:
       version: ${{ steps.version.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
       - run: pnpm install
 
@@ -56,11 +66,7 @@ jobs:
           body_path: ./dist/CHANGELOG.md
 
       - name: Publish package
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ steps.commit.outcome == 'success' && env.NPM_TOKEN != '' }}
+        if: ${{ steps.commit.outcome == 'success' || inputs.force }}
         run: |
-          pnpm config set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
           node -e "import('@gkd-kit/tools').then((m) => m.updatePkgVersion());"
           pnpm publish --no-git-checks
-          node -e "import('@gkd-kit/tools').then((m) => m.syncNpmmirror());"

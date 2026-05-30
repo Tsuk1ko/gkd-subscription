@@ -49,6 +49,10 @@
   },
   "packageManager": "pnpm@10.34.1",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsuk1ko/gkd-subscription.git"
   }
 }
