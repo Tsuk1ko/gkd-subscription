@@ -31,30 +31,24 @@
     "./dist/*.json5"
   ],
   "dependencies": {
-    "@eslint/js": "^9.30.1",
-    "@gkd-kit/api": "^0.7.3",
+    "@eslint/js": "^10.0.1",
+    "@gkd-kit/api": "^0.9.3",
     "@gkd-kit/define": "^0.0.1",
-    "@gkd-kit/tools": "^0.6.0",
-    "@types/node": "^22.16.0",
-    "eslint": "^9.30.1",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-unused-imports": "^4.1.4",
+    "@gkd-kit/tools": "^0.8.0",
+    "@types/node": "^24.12.4",
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-unused-imports": "^4.4.1",
     "json5": "^2.2.3",
-    "lint-staged": "^16.1.2",
-    "prettier": "^3.6.2",
-    "simple-git-hooks": "^2.13.0",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.35.1"
+    "lint-staged": "^17.0.5",
+    "prettier": "^3.8.3",
+    "simple-git-hooks": "^2.13.1",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0"
   },
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.34.1",
   "engines": {
     "node": ">=22"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "simple-git-hooks"
-    ]
   }
 }
