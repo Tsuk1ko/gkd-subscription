@@ -16,6 +16,7 @@ export default defineGkdApp({
           matches: [
             '[id="android:id/summary"][text="已关闭"] - [id="android:id/title"][text="自动精灵"]',
           ],
+          matchRoot: true,
           fastQuery: true,
           activityIds: [
             'com.android.settings.Settings$AccessibilitySettingsActivity',

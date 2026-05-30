@@ -29,6 +29,7 @@ export default defineGkdApp({
           matches: [
             '@[vid="main_tab_layout"] <<n LinearLayout + [id="android:id/statusBarBackground"][visibleToUser=true]',
           ],
+          matchRoot: true,
           activityIds: ['com.zdanjian.zdanjian.activities.home.HomeActivity'],
         },
       ],
