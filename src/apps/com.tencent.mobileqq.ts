@@ -60,7 +60,7 @@ export default defineGkdApp({
           name: '点击浏览方式的“打开”',
           forcedTime: 3000,
           matches:
-            '@TextView[text="打开"] <n View - TextView[text="你感兴趣的视频都在B站"] <<n [vid="webview"]',
+            'TextView[text="你感兴趣的视频都在B站"] + View > TextView[text="打开"]',
         },
         {
           key: 1,
